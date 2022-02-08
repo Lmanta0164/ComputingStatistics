@@ -49,7 +49,7 @@ public class ComputingStatistics {
        return max;
    }
    public double smallestLoan(){
-       double min=0.0;
+       double min=largestLoan();
        Loan loan;
        for (int i = 0; i < data.size();i++){
            loan=data.get(i);
