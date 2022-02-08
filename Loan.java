@@ -42,7 +42,7 @@ return country;
 public void setID(int ID){
     this.ID = ID;
 }
-public void setLoanAmount(double loanAmonnt){
+public void setLoanAmount(double loanAmount){
     this.loanAmount = loanAmount;
 }
 public void setCountry(String country){
