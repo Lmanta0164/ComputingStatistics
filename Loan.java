@@ -30,4 +30,13 @@ public int getNumLenders(){
 public String toString(){
     return "ID: "+ID+"/n"+"Loan Amount: "+loanAmount+"/n"+"Country: "+country+"/n"+"Days to Fund: "+daysToFund+"/n"+"Number of Lenders: "+numLenders;
 }
+public int getID(){
+return ID;
+}
+public double getLoanAmount(){
+return loanAmount;
+}
+public String getCountry(){
+return country;
+}
 }
