@@ -48,4 +48,10 @@ public void setLoanAmount(int loanAmonnt){
 public void setCountry(String country){
     country = this.country;
 }
+public void setDaysToFund(int daysToFund){
+this.daysToFund=daysToFund;
+}
+public void setNumLenders(int numLenders){
+this.numLenders=numLenders;
+}
 }
