@@ -40,13 +40,13 @@ public String getCountry(){
 return country;
 }
 public void setId(int ID){
-    ID = this.ID;
+    this.ID = ID;
 }
 public void setLoanAmount(int loanAmonnt){
-    loanAmount = this.loanAmount;
+    this.loanAmount = loanAmount;
 }
 public void setCountry(String country){
-    country = this.country;
+    this.country = country;
 }
 public void setDaysToFund(int daysToFund){
 this.daysToFund=daysToFund;
