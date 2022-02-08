@@ -13,8 +13,8 @@ public class LoanTester {
 //       System.out.println(testOne.getID() + " == 54321");
 //       testOne.setLoanAmount(450.00);
 //       System.out.println(testOne.getLoanAmount() + " == 450.0");
-//       testOne.setCountry("USA");
-//       System.out.println(testOne.getCountry() + " == USA");
+       testOne.setCountry("USA");
+       System.out.println(testOne.getCountry() + " == USA");
 //       testOne.setDaysToFund(12);
 //       System.out.println(testOne.getDaysToFund() + " == 12");
 //       testOne.setNumLenders(4);
