@@ -21,5 +21,13 @@ public class Loan
    this.daysToFund = daysToFund;
    this.numLenders = numLenders;
 }
-
+public int getDaysToFund(){
+    return daysToFund;
+}
+public int getNumLenders(){
+    return numLenders;
+}
+public String toString(){
+    return "ID: "+ID+"/n"+"Loan Amount: "+loanAmount+"/n"+"Country: "+country+"/n"+"Days to Fund: "+daysToFund+"/n"+"Number of Lenders: "+numLenders;
+}
 }
