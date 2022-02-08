@@ -28,7 +28,7 @@ public int getNumLenders(){
     return numLenders;
 }
 public String toString(){
-    return "ID: "+ID+"/n"+"Loan Amount: "+loanAmount+"/n"+"Country: "+country+"/n"+"Days to Fund: "+daysToFund+"/n"+"Number of Lenders: "+numLenders;
+    return "ID: "+ID+" Loan Amount: "+loanAmount+" Country: "+country+" Days to Fund: "+daysToFund+" Number of Lenders: "+numLenders;
 }
 public int getID(){
 return ID;
