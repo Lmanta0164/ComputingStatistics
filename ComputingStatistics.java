@@ -33,4 +33,19 @@ public class ComputingStatistics {
       }
       return amount;
    }
+   public double avgLoan() {
+      double amount=totalAmount();
+      return amount/data.size();
+   }
+   public double largestLoan() {
+       double max=0.0;
+       Loan loan;
+       for (int i = 0; i < data.size();i++){
+           loan=data.get(i);
+           if(loan.getLoanAmount()>max){
+               max=loan.getLoanAmount();
+           }
+       }
+       return max;
+   }
 }
