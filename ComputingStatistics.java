@@ -4,7 +4,7 @@ public class ComputingStatistics {
    /**
    * The ArrayList containing all of the loan data.
    */
-   private ArrayList<Loan> data;
+   private ArrayList<Loan> data = new ArrayList<Loan>();
    
    /**
     * Creates a new ComputingStatistics object with an empty ArrayList 
