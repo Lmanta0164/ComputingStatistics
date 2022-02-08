@@ -48,4 +48,39 @@ public class ComputingStatistics {
        }
        return max;
    }
+   public double smallestLoan(){
+       double min=0.0;
+       Loan loan;
+       for (int i = 0; i < data.size();i++){
+           loan=data.get(i);
+           if(loan.getLoanAmount()<min){
+               min=loan.getLoanAmount();
+           }
+       }
+       return min;
+   }
+   public String largestLoanCountry(){
+       Loan loan;
+       double max=largestLoan();
+       String Country="";
+       for (int i=0;  i<data.size(); i++){
+           loan=data.get(i);
+           if (loan.getLoanAmount()==max){
+               Country=loan.getCountry();
+           }
+       }
+       return Country;
+   }
+   public String smallestLoanCountry(){
+       Loan loan;
+       double min=smallestLoan();
+       String Country="";
+       for (int i=0;  i<data.size(); i++){
+           loan=data.get(i);
+           if (loan.getLoanAmount()==min){
+               Country=loan.getCountry();
+           }
+       }
+       return Country;
+   }
 }
