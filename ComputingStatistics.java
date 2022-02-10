@@ -90,7 +90,7 @@ public class ComputingStatistics {
          loan = data.get(i);
          amount = amount + loan.getDaysToFund();
       }
-      return amount/data.size();
+      return (amount/data.size())/86400;
    }
    public double largestLoan(String countryNm){
        double max = 0.0;
