@@ -105,4 +105,46 @@ public class ComputingStatistics {
        }
        return max;
    }
+   public double avgLoan(String countryNm) {
+      double amount = 0.0;
+      double runs=0.0;
+      Loan loan;
+      for(int i = 0; i < data.size(); i++) {
+         loan = data.get(i);
+         if (loan.getCountry().equals(countryNm)){
+         amount = amount + loan.getLoanAmount();
+         runs++;
+        }
+      }
+      return amount/runs;
+   }
+   public String longestToFundCountry(){
+       int max=0;
+       String Country="";
+       Loan loan;
+       for (int i = 0; i < data.size();i++){
+           loan=data.get(i);
+           if(loan.getLoanAmount()>max){
+               max=loan.getDaysToFund();
+           }
+       }
+       for (int J=0;  J<data.size(); J++){
+           loan=data.get(J);
+           if (loan.getLoanAmount()==max){
+               Country=loan.getCountry();
+           }
+       }
+       return Country;
+   }
+   public int loansFunded(String countryNm){
+      int runs=0;
+      Loan loan;
+      for(int i = 0; i < data.size(); i++) {
+         loan = data.get(i);
+         if (loan.getCountry().equals(countryNm)){
+         runs++;
+        }
+      }
+      return runs;
+   }
 }
