@@ -124,13 +124,13 @@ public class ComputingStatistics {
        Loan loan;
        for (int i = 0; i < data.size();i++){
            loan=data.get(i);
-           if(loan.getLoanAmount()>max){
+           if(loan.getDaysToFund()>max){
                max=loan.getDaysToFund();
            }
        }
        for (int J=0;  J<data.size(); J++){
            loan=data.get(J);
-           if (loan.getLoanAmount()==max){
+           if (loan.getDaysToFund()==max){
                Country=loan.getCountry();
            }
        }

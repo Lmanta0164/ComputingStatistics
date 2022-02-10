@@ -30,7 +30,7 @@ public class ComputingStatisticsRunner {
        System.out.println("Average loan amount in the Philippines: " + analysis.avgLoan("Philippines"));     //Level 2 Question 3
        System.out.println("The country with the longest to fund loan: " + analysis.longestToFundCountry());  //Level 2 Question 4
        String mostLoans = "";
-       if (loansFunded("El Salvador") > loansFunded("Kenya"))
+       if (analysis.loansFunded("El Salvador") > analysis.loansFunded("Kenya"))
            mostLoans = "El Salvador";
        else
            mostLoans = "Kenya";
