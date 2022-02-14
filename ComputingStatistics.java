@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.lang.Math;
 public class ComputingStatistics {
    /**
    * The ArrayList containing all of the loan data.
@@ -90,7 +90,7 @@ public class ComputingStatistics {
          loan = data.get(i);
          amount = amount + loan.getDaysToFund();
       }
-      return (amount/data.size())/86400;
+      return (amount/86400)/data.size();
    }
    public double largestLoan(String countryNm){
        double max = 0.0;
@@ -146,5 +146,45 @@ public class ComputingStatistics {
         }
       }
       return runs;
+   }
+   public double variance(){
+       Loan loan;
+       double difference;
+       double total=0;
+       double vari=0.0;
+       for(int i=0; i<data.size(); i++){
+           loan= data.get(i);
+           difference= loan.getLoanAmount()-avgLoan();
+           total += (difference*difference);
+       }
+       vari= total/data.size();
+       return vari;
+   }
+   public double standardDeviation(){
+       double standardDev = Math.sqrt(variance());
+       return standardDev;
+   }
+   public boolean empiricalRule(){
+       int yes=0;
+       int no=0;
+       int total=0;
+       Loan loan;
+       double percent = 0.68;
+       for (int i=0; i<data.size(); i++){
+           loan = data.get(i);
+           if ((loan.getLoanAmount() >= avgLoan()-standardDeviation())&&(loan.getLoanAmount()<= avgLoan()+standardDeviation())){
+               yes++;
+           }
+           else{
+               no++;
+           }
+           total++;
+       }
+       if((yes/total)>=percent){
+           return true;
+       }
+       else {
+           return false;
+       }
    }
 }
